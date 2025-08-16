@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seite nicht gefunden - Nicole Traurednerin</title>
+    <link rel="icon" type="image/x-icon" href="data/logo/NicoleGastropLogo_Herzen.ico">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .error-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .error-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 4rem 3rem;
+            border-radius: 30px;
+            box-shadow: 
+                0 15px 35px rgba(0,0,0,0.08),
+                0 5px 15px rgba(212, 175, 55, 0.1);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            margin-bottom: 2rem;
+        }
+
+        .error-number {
+            font-family: 'Dancing Script', cursive;
+            font-size: 8rem;
+            color: #d4af37;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+            line-height: 1;
+        }
+
+        .error-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: #5a7a5a;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .error-message {
+            font-size: 1.4rem;
+            color: #2d4a2d;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .error-quote {
+            font-style: italic;
+            color: #d4af37;
+            font-weight: 500;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(212, 175, 55, 0.12);
+            border-radius: 15px;
+            border-left: 5px solid #d4af37;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            font-size: 1.2rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: linear-gradient(135deg, #d4af37, #f4d03f);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 500;
+            box-shadow: 
+                0 8px 25px rgba(212, 175, 55, 0.4),
+                0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 
+                0 12px 35px rgba(212, 175, 55, 0.5),
+                0 6px 15px rgba(0, 0, 0, 0.25);
+            background: linear-gradient(135deg, #e6c147, #d4af37);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .home-link {
+            margin-top: 1.5rem;
+            display: block;
+        }
+
+        .home-link a {
+            color: #5a7a5a;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .home-link a:hover {
+            color: #d4af37;
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .error-container {
+                padding: 1.5rem;
+                min-height: auto;
+                padding-top: 2rem;
+            }
+
+            .error-content {
+                padding: 2.5rem 2rem;
+            }
+
+            .error-number {
+                font-size: 6rem;
+            }
+
+            .error-title {
+                font-size: 2.5rem;
+            }
+
+            .error-message {
+                font-size: 1.2rem;
+            }
+
+            .error-quote {
+                font-size: 1.1rem;
+                padding: 1.2rem;
+            }
+
+            .back-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .error-content {
+                padding: 2rem 1.5rem;
+                margin: 1rem;
+                border-radius: 20px;
+            }
+
+            .error-number {
+                font-size: 4.5rem;
+            }
+
+            .error-title {
+                font-size: 2rem;
+            }
+
+            .error-message {
+                font-size: 1.1rem;
+            }
+
+            .error-quote {
+                font-size: 1rem;
+                padding: 1rem;
+            }
+
+            .back-button {
+                padding: 0.7rem 1.2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Dekorative offene Herzen -->
+        <div class="heart heart-1">♡</div>
+        <div class="heart heart-2">♡</div>
+        <div class="heart heart-3">♡</div>
+        
+        <div class="error-container">
+            <div class="error-content">
+                <div class="error-number">404</div>
+                <h1 class="error-title">Seite nicht gefunden</h1>
+                <p class="error-message">
+                    Entschuldigung, die Seite, die Sie suchen, konnte nicht gefunden werden. 
+                    Manchmal verirren sich auch die schönsten Wege – aber jeder Umweg kann zu 
+                    neuen wundervollen Entdeckungen führen.
+                </p>
+                
+                <div class="error-quote">
+                    "Nicht alle, die wandern, sind verloren. Manchmal führt uns der Weg 
+                    genau dorthin, wo wir sein sollen."
+                </div>
+                
+                <a href="/" class="back-button">
+                    <i class="fas fa-heart"></i>
+                    Zurück zur Startseite
+                </a>
+                
+                <div class="home-link">
+                    <p>Besuchen Sie die <a href="index.html">Hauptseite</a> von Nicole - Ihrer freien Traurednerin aus Leidenschaft</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
