@@ -79,6 +79,7 @@
         <footer class="contact" id="contact">
             <div class="contact-header">
                 <h3>Kontakt</h3>
+                <p>Lassen Sie uns über Ihren besonderen Tag sprechen</p>
             </div>
             <div class="contact-info">
                 <div class="contact-item">
@@ -89,6 +90,54 @@
                     <span class="contact-icon"><i class="fas fa-envelope"></i></span>
                     <span>nicole@traurednerin.de</span>
                 </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-social">
+                <h4>Folgen Sie mir</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                    <a href="#" class="social-link" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-quote">
+                "Die schönsten Worte sind die, die von Herzen kommen und andere Herzen berühren. 
+                Jede Liebesgeschichte verdient es, mit den richtigen Worten erzählt zu werden."
+            </div>
+            
+            <div class="footer-legal">
+                <div class="legal-links">
+                    <a href="impressum.html" class="legal-link">Impressum</a>
+                    <a href="datenschutz.html" class="legal-link">Datenschutz</a>
+                    <a href="agb.html" class="legal-link">AGB</a>
+                    <a href="widerruf.html" class="legal-link">Widerrufsrecht</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2024 Nicole - Freie Traurednerin<span class="heart-small">♡</span>Alle Rechte vorbehalten
+                </div>
+                <button class="back-to-top" onclick="scrollToTop()">
+                    <i class="fas fa-arrow-up"></i>
+                    Nach oben
+                </button>
+            </div>
+            
+            <div class="footer-made-with">
+                Erstellt von Conflict Studios mit<span class="heart-small">♡</span>für unvergessliche Momente
             </div>
         </footer>
         
@@ -103,6 +152,13 @@
             document.querySelector('.contact').scrollIntoView({ 
                 behavior: 'smooth',
                 block: 'start'
+            });
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({ 
+                top: 0, 
+                behavior: 'smooth' 
             });
         }
     </script>
