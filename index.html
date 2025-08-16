@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicole - Freie Traurednerin aus Leidenschaft</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Dekorative offene Herzen -->
+        <div class="heart heart-1">♡</div>
+        <div class="heart heart-2">♡</div>
+        <div class="heart heart-3">♡</div>
+        
+        <header class="header">
+            <div class="logo-container">
+                <img src="data/logo/TrauerrednerinNicoleLogo_Transparent.png" alt="Nicole Traurednerin Logo" class="logo">
+            </div>
+            <div class="name-subtitle-container">
+                <h1 class="name">Nicole</h1>
+                <p class="subtitle">Freie Traurednerin aus Leidenschaft</p>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <div class="content-wrapper">
+                <div class="image-section">
+                    <img src="data/images/NicoleTruerrednerinBild.jpeg" alt="Nicole - Freie Traurednerin" class="profile-image">
+                </div>
+                
+                <div class="text-section">
+                    <div class="welcome-text">
+                        <h2>Herzlich willkommen</h2>
+                        <p>Ich bin Nicole – freie Traurednerin aus Leidenschaft. Ich schreibe seit jeher, Poesie ist
+                        mein Herzschlag. Für zwei Liebende die richtigen Worte zu finden, ist für mich mehr als
+                        ein Beruf – es ist meine Berufung.</p>
+                        <p class="highlight">Ich schenke euch Sätze, die bleiben. Worte, die euch auch Jahre später noch an den Zauber eurer Liebe erinnern.</p>
+                    </div>
+                    
+                    <div class="about-text">
+                        <h3>Warum ich freie Traurednerin bin</h3>
+                        <p>Hallo, ich bin <strong>Nicole</strong> – und ich glaube an die Magie von Worten. Schon immer habe ich
+                        leidenschaftlich gern geschrieben, besonders Poesie. Für mich sind Worte wie kleine
+                        Schätze: Sie können lachen lassen, Tränen rühren, Herzen verbinden – und
+                        Erinnerungen für ein ganzes Leben bewahren.</p>
+                        <p>Als freie Traurednerin ist es meine größte Freude, eure ganz persönliche Liebesgeschichte in Worte zu fassen. So einzigartig wie
+                        ihr seid, so individuell ist auch eure Rede. Ich höre zu, tauche in eure Geschichte ein
+                        und finde genau die Sätze, die euch und eure Liebe widerspiegeln.</p>
+                        <p>Meine Worte sollen euch nicht nur an eurem Hochzeitstag begleiten. Sie dürfen bleiben – als Erinnerung, die
+                        ihr immer wieder lesen, hören und fühlen könnt. Vielleicht geben sie euch auch in
+                        schwierigen Zeiten Kraft und erinnern euch daran, warum ihr euch gefunden habt.</p>
+                        <p class="closing"><em>Jede Trauung ist für mich ein Herzensprojekt. Ich schreibe mit Liebe, spreche mit Gefühl – 
+                        und schenke euch Worte, die euch für immer verbinden.</em></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="contact" id="contact">
+            <div class="contact-header">
+                <h3>Kontakt</h3>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                    <span>+49 (0) 123 456 789</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                    <span>nicole@traurednerin.de</span>
+                </div>
+            </div>
+            <div class="contact-cta">
+                <button class="cta-button">Erstgespräch vereinbaren</button>
+            </div>
+        </footer>
+        
+        <!-- Floating Contact Button -->
+        <div class="floating-contact-btn" onclick="scrollToContact()">
+            <span class="contact-btn-icon"><i class="fas fa-envelope"></i></span>
+        </div>
+    </div>
+    
+    <script>
+        function scrollToContact() {
+            document.querySelector('.contact').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    </script>
+</body>
+</html>
