@@ -9,7 +9,7 @@
 body {
     font-family: 'Cormorant Garamond', serif;
     background: linear-gradient(135deg, #f0f8f0 0%, #e8f5e8 50%, #f5f9f5 100%);
-    color: #2d4a2d;
+    color: #5a7a5a;
     line-height: 1.8;
     overflow-y: auto;
     min-height: 100vh;
@@ -461,7 +461,7 @@ body {
 
 .highlight-top {
     font-style: italic;
-    color: #30302f;
+    color: #5a7a5a;
     font-weight: 500;
     margin-top: 15px;
     padding: 12px;
@@ -486,7 +486,7 @@ strong {
 
 p {
     margin-bottom: 1.3rem;
-    text-align: justify;
+    text-align: left;
 }
 
 .h3-gold {
@@ -554,6 +554,18 @@ p {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.12);
     background: rgba(248, 255, 248, 0.95);
+}
+
+.contact-email {
+    color: #5a7a5a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.contact-email:hover {
+    color: #d4af37;
+    text-decoration: underline;
 }
 
 .contact-icon {
@@ -1063,7 +1075,7 @@ p {
 
 /* Herzchen Styles für Willkommen */
 .heart-small-bottom {
-    font-size: 0.7em !important;
+    font-size: 0.6em !important;
     vertical-align: bottom;
     color: #d4af37;
     opacity: 0.8;
@@ -1071,6 +1083,20 @@ p {
 
 .heart-big-top {
     font-size: 0.7em !important;
+    vertical-align: top;
+    color: #d4af37;
+    opacity: 0.8;
+}
+
+.heart-small-bottom-klein {
+    font-size: 0.8em !important;
+    vertical-align: bottom;
+    color: #d4af37;
+    opacity: 0.8;
+}
+
+.heart-big-top-klein {
+    font-size: 1em !important;
     vertical-align: top;
     color: #d4af37;
     opacity: 0.8;
