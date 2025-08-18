@@ -459,6 +459,18 @@ body {
     box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
+.highlight-top {
+    font-style: italic;
+    color: #30302f;
+    font-weight: 500;
+    margin-top: 15px;
+    padding: 12px;
+    background: rgba(212, 175, 55, 0.12);
+    border-radius: 15px;
+    border-left: 5px solid #d4af37;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
 .closing {
     text-align: center;
     font-size: 1.5rem;
@@ -475,6 +487,10 @@ strong {
 p {
     margin-bottom: 1.3rem;
     text-align: justify;
+}
+
+.h3-gold {
+    color: #D4AF37 !important;
 }
 
 /* Footer/Contact */
@@ -1043,4 +1059,19 @@ p {
         font-size: 1.3rem;
         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
     }
+}
+
+/* Herzchen Styles für Willkommen */
+.heart-small-bottom {
+    font-size: 0.7em !important;
+    vertical-align: bottom;
+    color: #d4af37;
+    opacity: 0.8;
+}
+
+.heart-big-top {
+    font-size: 0.7em !important;
+    vertical-align: top;
+    color: #d4af37;
+    opacity: 0.8;
 }
