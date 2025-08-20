@@ -473,10 +473,14 @@ body {
 
 .closing {
     text-align: center;
-    font-size: 1.5rem;
-    color: #d4af37;
+    font-size: 1.7rem;
+    color: #000000 !important;
     margin-top: 2rem;
     font-weight: 500;
+}
+
+.closing strong {
+    color: #af8c17;
 }
 
 strong {
