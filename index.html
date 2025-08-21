@@ -92,13 +92,13 @@
                 <p>Lassen Sie uns über Ihren besonderen Tag sprechen</p>
             </div>
             <div class="contact-info">
-                <!-- <div class="contact-item">
+                <div class="contact-item">
                     <span class="contact-icon"><i class="fas fa-phone"></i></span>
-                    <span>+49 (0) 123 456 789</span>
-                </div> -->
+                    <a href="tel:+49123456789" class="contact-link">*KOMMT NOCH*</a>
+                </div>
                 <div class="contact-item">
                     <span class="contact-icon"><i class="fas fa-envelope"></i></span>
-                    <a href="mailto:nicole@favoladamore.de" class="contact-email">nicole@favoladamore.de</a>
+                    <span class="contact-link email-link" onclick="openSecureEmail()">nicole<img src="data/symbols/At_sign.png" alt="hallo" class="at-symbol">favoladamore.de</span>
                 </div>
             </div>
             
@@ -107,8 +107,9 @@
             <div class="footer-social">
                 <h4>Folgen Sie mir</h4>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/reysome75?igsh=MWhhNDJkNmtyY3hlNQ%3D%3D&utm_source=qr" class="social-link" title="Instagram">
-                        <i class="fab fa-instagram"></i>
+                    <a href="https://www.instagram.com/freietrauung_nicole_1307" class="social-link social-link--with-label" title="Instagram" target="_blank" rel="noopener">
+                        <span class="social-icon-circle"><i class="fab fa-instagram"></i></span>
+                        <span class="social-label">Instagram</span>
                     </a>
                     <!-- <a href="#" class="social-link" title="Facebook">
                         <i class="fab fa-facebook-f"></i>
@@ -145,7 +146,14 @@
             </div>
             
             <div class="footer-made-with">
-                Erstellt von Conflict Studios mit<span class="heart-small">♡</span>für unvergessliche Momente
+                <span class="footer-made-with-text">Liebevoll gestaltet</span>
+                <span class="heart-small">♡</span>
+                <span class="footer-made-with-text">von</span>
+                <span class="creator-name">Marco Rey</span>
+                <span>bei</span>
+                <a href="https://conflictstudios.de/WebDev" class="creator-link" target="_blank" rel="noopener" title="Conflict Studios – Webdesign mit Leidenschaft">
+                   Conflict Studios
+                </a>
             </div>
         </footer>
         
@@ -169,6 +177,46 @@
                 behavior: 'smooth' 
             });
         }
+        
+        // Bot-sichere E-Mail-Funktion
+        function openEmail(user, domain) {
+            window.location.href = 'mailto:' + user + '@' + domain;
+        }
+        
+        // Hochsichere E-Mail-Funktion mit Verschleierung
+        function openSecureEmail() {
+            const parts = ['ni', 'co', 'le'];
+            const domain = ['fav', 'ola', 'dam', 'ore', '.de'];
+            const user = parts.join('');
+            const dom = domain.join('');
+            const email = user + String.fromCharCode(64) + dom; // 64 = @
+            window.location.href = 'mai' + 'lto:' + email;
+        }
+        
+        // Verhindert Kopieren der E-Mail-Bereiche
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailLinks = document.querySelectorAll('.email-link');
+            
+            emailLinks.forEach(function(link) {
+                // Verhindert Rechtsklick/Kontextmenü
+                link.addEventListener('contextmenu', function(e) {
+                    e.preventDefault();
+                    return false;
+                });
+                
+                // Verhindert Drag-Start
+                link.addEventListener('dragstart', function(e) {
+                    e.preventDefault();
+                    return false;
+                });
+                
+                // Verhindert Copy-Events
+                link.addEventListener('copy', function(e) {
+                    e.preventDefault();
+                    return false;
+                });
+            });
+        });
     </script>
 </body>
 </html>

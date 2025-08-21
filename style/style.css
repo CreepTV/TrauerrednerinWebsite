@@ -552,6 +552,9 @@ p {
     font-size: 1.3rem;
     color: #5a7a5a;
     font-weight: 500;
+    max-width: 100%;
+    box-sizing: border-box;
+    flex-wrap: nowrap; /* eine Zeile behalten */
 }
 
 .contact-item:hover {
@@ -560,16 +563,88 @@ p {
     background: rgba(248, 255, 248, 0.95);
 }
 
-.contact-email {
+.contact-email,
+.contact-link {
     color: #5a7a5a;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
+    white-space: nowrap;     /* E-Mail immer einzeilig anzeigen */
+    overflow-wrap: normal;
+    word-break: normal;
+    min-width: 0;            /* verhindert, dass Flex-Item die Box sprengt */
+    flex: 1 1 auto;          /* nutzt verbleibende Breite neben dem Icon */
+    cursor: pointer;         /* klickbar darstellen trotz globalem cursor: default */
 }
 
-.contact-email:hover {
+.contact-email:hover,
+.contact-link:hover {
     color: #d4af37;
     text-decoration: underline;
+}
+
+.contact-email:visited,
+.contact-link:visited {
+    color: #5a7a5a;
+}
+
+/* @ Symbol Bild */
+.at-symbol {
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    vertical-align: middle;
+    margin: 0 1px;
+}
+
+/* Bot-sichere E-Mail Links */
+.email-link {
+    color: #5a7a5a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+    /* Verhindert Textauswahl und Kopieren */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* Verhindert Drag & Drop */
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    /* Verhindert Kontextmenü */
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.email-link:hover {
+    color: #d4af37;
+    text-decoration: underline;
+}
+
+/* Verhindert Auswahl des @ Symbol Bildes */
+.at-symbol {
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    vertical-align: middle;
+    margin: 0 1px;
+    /* Verhindert Bildauswahl und Drag & Drop */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    /* Deaktiviert Kontextmenü für Bilder */
+    pointer-events: none;
 }
 
 .contact-icon {
@@ -621,7 +696,7 @@ p {
 }
 
 .social-link {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 45px;
@@ -632,6 +707,7 @@ p {
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 3px 10px rgba(90, 122, 90, 0.3);
+    white-space: nowrap;
 }
 
 .social-link:hover {
@@ -642,6 +718,36 @@ p {
 
 .social-link i {
     font-size: 1.2rem;
+}
+
+/* Labeled social link variant */
+.social-link--with-label {
+    border-radius: 999px; /* pill when label present */
+    padding-right: 14px;
+    padding-left: 0;
+    gap: 10px;
+    width: auto; /* allow label to be visible */
+}
+
+.social-link--with-label .social-icon-circle {
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: transparent; /* uses parent gradient */
+}
+
+.social-link--with-label .social-label {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Ensure hover scales the whole pill subtly */
+.social-link--with-label:hover {
+    transform: translateY(-2px) scale(1.03);
 }
 
 .footer-quote {
@@ -721,17 +827,89 @@ p {
 .footer-made-with {
     width: 100%;
     text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.95rem;
+    color: #7a7a7a;
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
     margin-top: 1.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(212, 175, 55, 0.1);
-    color: #5a7a5a;
-    font-size: 0.9rem;
-    opacity: 0.7;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent);
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.footer-made-with-text {
+    font-style: italic;
+    color: #a08660;
+    letter-spacing: 0.8px;
+    margin: 0 5px;
+    font-weight: 400;
+    text-shadow: 0 1px 2px rgba(160, 134, 96, 0.1);
+}
+
+.footer-made-with .creator-name {
+    font-weight: 700;
+    color: #d4af37;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 3px rgba(139, 69, 19, 0.25);
+    font-style: normal;
+    margin: 0 8px;
+    text-transform: none;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.footer-made-with span:not(.heart-small):not(.globe-icon):not(.creator-name):not(.footer-made-with-text) {
+    margin: 0 4px;
+    color: #969696;
+    font-weight: 400;
+    letter-spacing: 0.3px;
 }
 
 .footer-made-with .heart-small {
     color: #d4af37;
-    margin: 0 0.2rem;
+    font-size: 1.1em;
+    margin: 0 8px;
+    filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
+    animation: heartbeat 2s infinite;
+}
+
+.footer-made-with .creator-link {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.6px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 12px;
+    padding: 6px 16px;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Cormorant Garamond', serif;
+    text-shadow: 0 1px 2px rgba(139, 69, 19, 0.15);
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(212, 175, 55, 0.1));
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
+}
+
+.footer-made-with .creator-link:hover {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #d4af37, #f4d03f);
+    border-color: #f4d03f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+.footer-made-with .globe-icon {
+    font-size: 0.95em;
+    margin-right: 4px;
+    margin-left: 0;
+    opacity: 0.9;
+    color: #d4af37;
+    filter: drop-shadow(0 1px 2px rgba(212, 175, 55, 0.2));
+    vertical-align: middle;
+    text-decoration: none;
+    display: inline-block;
 }
 
 /* Legal Links Section */
@@ -957,17 +1135,19 @@ p {
     }
     
     .contact-item {
-        padding: 1rem 1.3rem;
-        font-size: 1.1rem;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
         border-radius: 15px;
         width: 100%;
-        max-width: 320px;
+        max-width: none;      /* keine künstliche Begrenzung, damit eine Zeile passt */
+        gap: 0.8rem;
+        justify-content: flex-start; /* Text neben Icon, nicht gequetscht zentriert */
     }
-    
+
     .contact-icon {
-        width: 45px;
-        height: 45px;
-        font-size: 1.6rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.4rem;
     }
     
     .social-links {
@@ -981,6 +1161,19 @@ p {
     
     .social-link i {
         font-size: 1rem;
+    }
+
+    .social-link--with-label {
+        padding-right: 12px;
+        gap: 8px;
+    width: auto; /* don't clamp to 40px on mobile */
+    }
+    .social-link--with-label .social-icon-circle {
+        width: 40px;
+        height: 40px;
+    }
+    .social-link--with-label .social-label {
+        font-size: 0.95rem;
     }
     
     .footer-quote {
