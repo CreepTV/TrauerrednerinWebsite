@@ -363,6 +363,168 @@ body {
     }
 }
 
+/* Navigation */
+.main-navigation {
+    position: relative;
+    z-index: 100;
+    margin: 2rem 0 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
+}
+
+.nav-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #5a7a5a;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.nav-link:hover::before {
+    left: 100%;
+}
+
+.nav-link:hover {
+    color: #d4af37;
+    background: rgba(212, 175, 55, 0.1);
+    transform: translateY(-1px);
+}
+
+.nav-icon {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover .nav-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.nav-link.active {
+    color: #d4af37;
+    background: rgba(212, 175, 55, 0.15);
+    font-weight: 600;
+}
+
+.nav-link.active .nav-icon {
+    color: #d4af37;
+    transform: scale(1.1);
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #d4af37, #f0d068);
+    transition: width 0.3s ease;
+    border-radius: 1px;
+}
+
+.nav-link:hover + ::after,
+.nav-item:hover::after {
+    width: 80%;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .main-navigation {
+        margin: 1.5rem 0 2rem 0;
+    }
+    
+    .nav-container {
+        padding: 0.6rem 1rem;
+        border-radius: 40px;
+        margin: 0 1rem;
+    }
+    
+    .nav-menu {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-link {
+        padding: 0.6rem 0.8rem;
+        font-size: 1rem;
+        border-radius: 20px;
+    }
+    
+    .nav-link span {
+        display: none;
+    }
+    
+    .nav-icon {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0.5rem 0.8rem;
+        margin: 0 0.5rem;
+    }
+    
+    .nav-menu {
+        gap: 0.3rem;
+    }
+    
+    .nav-link {
+        padding: 0.5rem;
+        min-width: 45px;
+        justify-content: center;
+    }
+}
+
 /* Main Content */
 .main-content {
     flex: 1;
@@ -1297,4 +1459,203 @@ p {
     vertical-align: top;
     color: #d4af37;
     opacity: 0.8;
+}
+
+/* Honorar-spezifische Styles */
+body:has([title*="Honorar"]) .profile-image,
+body[data-page="honorar"] .profile-image {
+    max-width: 250px;
+    height: 320px;
+}
+
+.pricing-section {
+    margin: 2rem 0;
+}
+
+.pricing-item {
+    background: rgba(248, 255, 248, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.pricing-item h4 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.service-list li {
+    padding: 0.8rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: #5a7a5a;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.service-list li:before {
+    content: "♡";
+    position: absolute;
+    left: 0;
+    color: #d4af37;
+    font-size: 1.2rem;
+    top: 0.8rem;
+}
+
+.service-list li:last-child {
+    border-bottom: none;
+}
+
+.price-info {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.price-label {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #d4af37;
+    font-weight: 600;
+}
+
+.additional-info {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(90, 122, 90, 0.2);
+    margin: 2rem 0;
+}
+
+.additional-info h4 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: #5a7a5a;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.additional-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.additional-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #5a7a5a;
+    font-size: 1rem;
+}
+
+.additional-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.contact-cta {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contact-cta p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #5a7a5a;
+}
+
+.contact-cta strong {
+    color: #d4af37;
+    font-weight: 600;
+}
+
+/* Responsive Anpassungen für Honorar */
+@media (max-width: 768px) {
+    .pricing-item {
+        padding: 1.5rem;
+    }
+    
+    .pricing-item h4 {
+        font-size: 1.6rem;
+    }
+    
+    .service-list li {
+        font-size: 1rem;
+        padding: 0.6rem 0;
+        padding-left: 1.8rem;
+    }
+    
+    .price-label {
+        font-size: 1.3rem;
+    }
+    
+    .additional-info h4 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-cta p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-item {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .pricing-item h4 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .service-list li {
+        font-size: 0.95rem;
+        padding: 0.5rem 0;
+        padding-left: 1.5rem;
+    }
+    
+    .price-label {
+        font-size: 1.2rem;
+    }
+    
+    .additional-info {
+        padding: 1rem;
+    }
+    
+    .additional-info h4 {
+        font-size: 1.3rem;
+    }
+    
+    .contact-cta {
+        padding: 1rem;
+    }
+    
+    .contact-cta p {
+        font-size: 1rem;
+    }
 }
