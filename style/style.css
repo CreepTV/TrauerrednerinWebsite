@@ -1593,6 +1593,21 @@ body[data-page="honorar"] .profile-image {
     font-weight: 600;
 }
 
+/* Kleine Logo-Darstellung in Call-to-Action Box */
+.cta-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: inline-block;
+}
+
+@media (max-width: 480px) {
+    .cta-logo {
+        width: 50px;
+        height: 50px;
+    }
+}
+
 /* Responsive Anpassungen für Honorar */
 @media (max-width: 768px) {
     .pricing-item {
