@@ -8,13 +8,25 @@
     <meta name="title" content="Galerie - Favola d' amore" />
     <meta name="description" content="Eindrücke und Momente von unvergesslichen Trauungen. Entdecken Sie die Schönheit emotionaler Zeremonien." />
     <meta name="keywords" content="Hochzeitsgalerie, Trauungsbilder, Freie Trauung Impressionen, Hochzeitsmomente, Romantische Hochzeiten">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://favoladamore.de" />
+    <meta property="og:title" content="Favola d’ amore -  Freie Traurednerin aus Leidenschaft" />
+    <meta property="og:description" content="Ich bin Nicole ‒ freie Traurednerin aus voller Überzeugung und mit ganzem Herzen. "Ich schenke euch Sätze, die bleiben. Worte, die euch auch Jahre später noch an den Zauber eurer Liebe erinnern."" />
+    <meta property="og:image" content="https://favoladamore.de/data/images/NicoleTruerrednerinBildCutout.png" />
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="http://favoladamore.de" />
+    <meta property="twitter:title" content="Favola d’ amore -  Freie Traurednerin aus Leidenschaft" />
+    <meta property="twitter:description" content="Ich bin Nicole ‒ freie Traurednerin aus voller Überzeugung und mit ganzem Herzen. "Ich schenke euch Sätze, die bleiben. Worte, die euch auch Jahre später noch an den Zauber eurer Liebe erinnern."" />
+    <meta property="twitter:image" content="https://favoladamore.de/data/images/NicoleTruerrednerinBildCutout.png" />
     <link rel="icon" type="image/x-icon" href="data/logo/NicoleGastropLogo_Herzen.ico">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/galerie.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body data-page="galerie">
     <div class="container">
         <!-- Dekorative offene Herzen -->
         <div class="heart heart-1">♡</div>
@@ -68,11 +80,11 @@
                 </ul>
             </div>
         </nav>
-
+        
         <!-- Gallery Content -->
         <div class="gallery-content">
             <div class="gallery-header">
-                <h2>Momente voller Liebe ♡</h2>
+                <h2><span class="heart-small-bottom">♡</span> Momente voller Liebe<span class="heart-big-top">♡</span></h2>
                 <p>Jede Hochzeit ist einzigartig. Jede Zeremonie erzählt eine besondere Geschichte. 
                    Lassen Sie sich von diesen besonderen Momenten inspirieren und träumen Sie von Ihrer 
                    ganz persönlichen Trauung.</p>
@@ -164,56 +176,57 @@
                 </div>
             </div>
         </div>
-
+        
         <!-- Contact Section -->
         <div class="contact" id="contact">
             <div class="contact-header">
                 <h3>Kontakt</h3>
-                <p>Lassen Sie uns gemeinsam Ihre Traumhochzeit gestalten</p>
+                <p>Lassen Sie uns über Ihren besonderen Tag sprechen</p>
             </div>
-            
             <div class="contact-info">
                 <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <a href="#" class="email-link contact-email" onclick="openSecureEmail(); return false;">
-                        nicole<img src="data/symbols/email_at_gold.png" alt="@" class="at-symbol">favoladamore.de
-                    </a>
+                    <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                    <a href="tel:+4915234070125" class="contact-link">+49 152 34070125</a>
                 </div>
-                
                 <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <a href="tel:+4917641449953" class="contact-link">+49 176 41449953</a>
+                    <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                    <span class="contact-link email-link" onclick="openSecureEmail()">nicole<img src="data/symbols/At_sign.png" alt="hallo" class="at-symbol">favoladamore.de</span>
                 </div>
             </div>
-
+            
             <div class="footer-divider"></div>
-
+            
             <div class="footer-social">
+                <h4>Folgen Sie mir</h4>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/favoladamore/" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
-                        <i class="fab fa-instagram"></i>
+                    <a href="https://www.instagram.com/freietrauung_nicole_1307" class="social-link social-link--with-label" title="Instagram" target="_blank" rel="noopener">
+                        <span class="social-icon-circle"><i class="fab fa-instagram"></i></span>
+                        <span class="social-label">Instagram</span>
                     </a>
-                    <a href="https://www.facebook.com/profile.php?id=61568873951831" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook">
+                    <!-- <a href="#" class="social-link" title="Facebook">
                         <i class="fab fa-facebook-f"></i>
-                    </a>
+                    </a> -->
+                    <!-- <a href="#" class="social-link" title="Pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a> -->
+                    <!-- <a href="#" class="social-link" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a> -->
                 </div>
             </div>
-
-            <div class="footer-divider"></div>
-
+            
+            <div class="footer-quote">
+                "Die schönsten Worte sind die, die von Herzen kommen und andere Herzen berühren. 
+                Jede Liebesgeschichte verdient es, mit den richtigen Worten erzählt zu werden."
+            </div>
+            
             <div class="footer-legal">
                 <div class="legal-links">
                     <a href="impressum.html" class="legal-link">Impressum</a>
                     <a href="datenschutz.html" class="legal-link">Datenschutz</a>
                 </div>
             </div>
-
-            <div class="footer-divider"></div>
-
+            
             <div class="footer-bottom">
                 <p class="footer-copyright">
                     © 2025 Favola d'amore - Nicole Gastrop. Alle Rechte vorbehalten. <span class="heart-small">♡</span>
@@ -230,7 +243,7 @@
                 </div>
             </div>
         </div>
-
+        
         <!-- Floating Contact Button -->
         <div class="floating-contact-btn" onclick="scrollToContact()">
             <span class="contact-btn-icon"><i class="fas fa-envelope"></i></span>
@@ -259,12 +272,15 @@
     <script>
         let currentImageIndex = 1;
         const totalImages = 12;
+        let touchStartX = 0;
+        let touchEndX = 0;
+        let isAnimating = false;
 
         function openLightbox(imageNumber) {
             currentImageIndex = imageNumber;
             updateLightboxImage();
             document.getElementById('lightbox').classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            document.body.style.overflow = 'hidden';
         }
 
         function closeLightbox(event) {
@@ -272,13 +288,20 @@
                 event.stopPropagation();
             }
             document.getElementById('lightbox').classList.remove('active');
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
+            document.body.style.overflow = 'auto';
         }
 
         function changeImage(direction, event) {
             if (event) {
                 event.stopPropagation();
             }
+            
+            if (isAnimating) return;
+            isAnimating = true;
+
+            const imgElement = document.getElementById('lightbox-img');
+            const oldIndex = currentImageIndex;
+            
             currentImageIndex += direction;
             
             if (currentImageIndex > totalImages) {
@@ -286,8 +309,26 @@
             } else if (currentImageIndex < 1) {
                 currentImageIndex = totalImages;
             }
-            
-            updateLightboxImage();
+
+            // Animationsrichtung basierend auf Swipe-Richtung
+            const outAnimation = direction > 0 ? 'slide-out-left' : 'slide-out-right';
+            const inAnimation = direction > 0 ? 'slide-in-right' : 'slide-in-left';
+
+            // Alte Animation abspielen
+            imgElement.classList.add(outAnimation);
+
+            // Nach der Animation das Bild wechseln
+            setTimeout(() => {
+                imgElement.classList.remove(outAnimation);
+                updateLightboxImage();
+                imgElement.classList.add(inAnimation);
+
+                // Animation-Klasse nach Beendigung entfernen
+                setTimeout(() => {
+                    imgElement.classList.remove(inAnimation);
+                    isAnimating = false;
+                }, 500);
+            }, 500);
         }
 
         function updateLightboxImage() {
@@ -311,6 +352,34 @@
             }
         });
 
+        // Touch-Gesten für Mobile
+        const lightboxContent = document.querySelector('.lightbox-content');
+        if (lightboxContent) {
+            lightboxContent.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            }, false);
+
+            lightboxContent.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, false);
+        }
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swipe left → nächstes Bild
+                    changeImage(1);
+                } else {
+                    // Swipe right → vorheriges Bild
+                    changeImage(-1);
+                }
+            }
+        }
+
         function scrollToContact() {
             document.querySelector('.contact').scrollIntoView({ 
                 behavior: 'smooth',
@@ -324,7 +393,7 @@
             const domain = ['fav', 'ola', 'dam', 'ore', '.de'];
             const user = parts.join('');
             const dom = domain.join('');
-            const email = user + String.fromCharCode(64) + dom; // 64 = @
+            const email = user + String.fromCharCode(64) + dom;
             window.location.href = 'mai' + 'lto:' + email;
         }
 
@@ -333,19 +402,16 @@
             const emailLinks = document.querySelectorAll('.email-link');
             
             emailLinks.forEach(function(link) {
-                // Verhindert Rechtsklick/Kontextmenü
                 link.addEventListener('contextmenu', function(e) {
                     e.preventDefault();
                     return false;
                 });
                 
-                // Verhindert Drag-Start
                 link.addEventListener('dragstart', function(e) {
                     e.preventDefault();
                     return false;
                 });
                 
-                // Verhindert Copy-Events
                 link.addEventListener('copy', function(e) {
                     e.preventDefault();
                     return false;
