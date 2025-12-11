@@ -232,6 +232,22 @@ body {
         justify-content: center;
         text-align: center;
     }
+    
+    .welcome-text {
+        padding: 2rem;
+        border-radius: 20px;
+    }
+    
+    .welcome-text h2 {
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .welcome-text h2::after {
+        width: 80px;
+        height: 2px;
+        margin: 0.8rem auto 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -251,7 +267,7 @@ body {
     }
     
     .container {
-        padding: 0 1rem 1rem !important;
+        padding: 0 0 0 !important;
     }
 
     .header {
@@ -578,19 +594,56 @@ body {
 
 .welcome-text {
     margin-bottom: 3rem;
-    background: rgba(248, 255, 248, 0.6);
-    padding: 2rem;
-    border-radius: 20px;
-    border: 1px solid rgba(212, 175, 55, 0.15);
+    background: linear-gradient(135deg, rgba(248, 255, 248, 0.9), rgba(255, 255, 255, 0.7));
+    padding: 2.5rem;
+    border-radius: 25px;
+    border: 2px solid rgba(212, 175, 55, 0.25);
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.05),
+        0 2px 8px rgba(212, 175, 55, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+    opacity: 0.6;
 }
 
 .welcome-text h2 {
     font-family: 'Dancing Script', cursive;
-    font-size: 3rem;
+    font-size: 3.2rem;
     color: #d4af37;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
     font-weight: 600;
     text-align: center;
+    text-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
+    position: relative;
+}
+
+.welcome-text h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+.welcome-text p {
+    text-align: center;
+    line-height: 1.9;
+}
+
+.welcome-text p:last-child {
+    margin-bottom: 0;
 }
 
 .about-text {
@@ -646,7 +699,7 @@ body {
 }
 
 strong {
-    color: #d4af37;
+    color: #cca525;
     font-weight: 500;
 }
 
@@ -688,6 +741,7 @@ p {
 
 .contact-header p {
     font-size: 1.4rem;
+    text-align: center;
     color: #5a7a5a;
     font-style: italic;
     margin-bottom: 0;
@@ -1240,7 +1294,11 @@ p {
     .welcome-text {
         padding: 1.5rem;
         margin-bottom: 2rem;
-        border-radius: 15px;
+        border-radius: 18px;
+    }
+    
+    .welcome-text::before {
+        height: 3px;
     }
     
     .welcome-text h2 {
@@ -1248,8 +1306,14 @@ p {
         margin-bottom: 1rem;
     }
     
+    .welcome-text h2::after {
+        width: 60px;
+        height: 2px;
+        margin: 0.7rem auto 0;
+    }
+    
     .about-text {
-        padding: 1.5rem;
+        padding: 1.2rem !important;
         border-radius: 15px;
     }
     
@@ -1608,58 +1672,175 @@ body[data-page="honorar"] .profile-image {
     }
 }
 
-/* Responsive Anpassungen für Honorar */
-@media (max-width: 768px) {
-    .pricing-item {
-        padding: 1.5rem;
-    }
-    
-    .pricing-item h4 {
-        font-size: 1.6rem;
-    }
-    
-    .service-list li {
-        font-size: 1rem;
-        padding: 0.6rem 0;
-        padding-left: 1.8rem;
-    }
-    
-    .price-label {
-        font-size: 1.3rem;
-    }
-    
-    .additional-info h4 {
-        font-size: 1.5rem;
-    }
-    
-    .contact-cta p {
-        font-size: 1.1rem;
-    }
+/* Neue Honorar-Seite Styles */
+.content-wrapper--full {
+    display: block !important;
+}
+
+.text-section--full {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+.honorar-services-box {
+    background: rgba(248, 255, 248, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 4px solid #d4af37;
+    margin: 2.5rem 0;
+}
+
+.honorar-services-title {
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.honorar-services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.honorar-services-list li {
+    padding: 0.4rem 0;
+    position: relative;
+    padding-left: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.7;
+}
+
+.service-heart {
+    position: absolute;
+    left: 0;
+    color: #d4af37;
+    font-size: 1.3rem;
+}
+
+.honorar-price-box {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
+    padding: 3rem 2.5rem;
+    border-radius: 25px;
+    border: 3px solid rgba(212, 175, 55, 0.5);
+    margin-top: 3rem;
+    text-align: center;
+    box-shadow: 
+        0 10px 30px rgba(212, 175, 55, 0.25),
+        0 5px 15px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.honorar-price-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    animation: shimmer 6s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { transform: translate(0, 0); opacity: 0.3; }
+    50% { transform: translate(10%, 10%); opacity: 0.5; }
+}
+
+.honorar-price-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #d4af37;
+    margin-bottom: 1.8rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
+.honorar-price-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+    margin: 0.8rem auto 0;
+    border-radius: 2px;
+}
+
+.honorar-price-amount {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #d4af37;
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 1;
+    letter-spacing: 2px;
+}
+
+.honorar-price-tax {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #5a7a5a;
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+.honorar-price-subtitle {
+    margin-top: 1.2rem;
+    font-size: 1.4rem;
+    color: #5a7a5a;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+.contact-cta--honorar {
+    margin-top: 3rem;
 }
 
 @media (max-width: 480px) {
     .pricing-item {
         padding: 1rem;
-        margin-bottom: 1.5rem;
     }
     
-    .pricing-item h4 {
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
+    .honorar-price-box {
+        padding: 2rem 1.5rem;
+        margin-top: 2rem;
+        border-radius: 18px;
     }
     
-    .service-list li {
+    .honorar-price-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .honorar-price-title::after {
+        width: 50px;
+        height: 2px;
+        margin: 0.5rem auto 0;
+    }
+    
+    .honorar-price-amount {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+    
+    .honorar-price-tax {
+        font-size: 1.05rem;
+        margin-left: 0.3rem;
+    }
+    
+    .honorar-price-subtitle {
         font-size: 0.95rem;
-        padding: 0.5rem 0;
-        padding-left: 1.5rem;
-    }
-    
-    .price-label {
-        font-size: 1.2rem;
-    }
-    
-    .additional-info {
-        padding: 1rem;
+        margin-top: 1rem;
     }
     
     .additional-info h4 {
@@ -1673,4 +1854,30 @@ body[data-page="honorar"] .profile-image {
     .contact-cta p {
         font-size: 1rem;
     }
+    
+    .honorar-services-box {
+        padding: 1.2rem;
+        margin: 1.5rem 0;
+    }
+    
+    .honorar-services-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .honorar-services-list li {
+        font-size: 1.08rem;
+        padding: 0.6rem 0;
+        padding-left: 1.7rem;
+        line-height: 1.6;
+    }
+    
+    .service-heart {
+        font-size: 1.2rem;
+    }
+    
+    .contact-cta--honorar {
+        margin-top: 2rem;
+    }
 }
+

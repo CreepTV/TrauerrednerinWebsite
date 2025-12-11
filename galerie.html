@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>Galerie - Nicole Freie Traurednerin</title>
+    <meta name="title" content="Galerie - Favola d' amore" />
+    <meta name="description" content="Eindrücke und Momente von unvergesslichen Trauungen. Entdecken Sie die Schönheit emotionaler Zeremonien." />
+    <meta name="keywords" content="Hochzeitsgalerie, Trauungsbilder, Freie Trauung Impressionen, Hochzeitsmomente, Romantische Hochzeiten">
+    <link rel="icon" type="image/x-icon" href="data/logo/NicoleGastropLogo_Herzen.ico">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/galerie.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Dekorative offene Herzen -->
+        <div class="heart heart-1">♡</div>
+        <div class="heart heart-2">♡</div>
+        <div class="heart heart-3">♡</div>
+        
+        <header class="header">
+            <div class="logo-container">
+                <img src="data/logo/TrauerrednerinNicoleLogo_Transparent.png" alt="Nicole Traurednerin Logo" class="logo">
+            </div>
+            <div class="name-subtitle-container">
+                <h1 class="name">Nicole</h1>
+                <p class="subtitle">Freie Traurednerin aus Leidenschaft</p>
+            </div>
+        </header>
+        
+        <!-- Navigation -->
+        <nav class="main-navigation">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="deinevent.html" class="nav-link">
+                            <i class="fas fa-heart nav-icon"></i>
+                            <span>Dein Event</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="honorar.html" class="nav-link">
+                            <i class="fas fa-certificate nav-icon"></i>
+                            <span>Honorar</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="galerie.html" class="nav-link active">
+                            <i class="fas fa-camera nav-icon"></i>
+                            <span>Galerie</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#contact" class="nav-link">
+                            <i class="fas fa-envelope nav-icon"></i>
+                            <span>Kontakt</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Gallery Content -->
+        <div class="gallery-content">
+            <div class="gallery-header">
+                <h2>Momente voller Liebe ♡</h2>
+                <p>Jede Hochzeit ist einzigartig. Jede Zeremonie erzählt eine besondere Geschichte. 
+                   Lassen Sie sich von diesen besonderen Momenten inspirieren und träumen Sie von Ihrer 
+                   ganz persönlichen Trauung.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox(1)">
+                    <img src="data/images/galerie/Galerie_Bild_01.jpeg" alt="Hochzeitsmoment 1">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-number">Moment 1</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(2)">
+                    <img src="data/images/galerie/Galerie_Bild_02.jpeg" alt="Hochzeitsmoment 2">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-number">Moment 2</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(3)">
+                    <img src="data/images/galerie/Galerie_Bild_03.jpeg" alt="Hochzeitsmoment 3">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-number">Moment 3</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(4)">
+                    <img src="data/images/galerie/Galerie_Bild_04.jpeg" alt="Hochzeitsmoment 4">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-number">Moment 4</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(5)">
+                    <img src="data/images/galerie/Galerie_Bild_05.jpeg" alt="Hochzeitsmoment 5">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-number">Moment 5</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(6)">
+                    <img src="data/images/galerie/Galerie_Bild_06.jpeg" alt="Hochzeitsmoment 6">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-number">Moment 6</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(7)">
+                    <img src="data/images/galerie/Galerie_Bild_07.jpeg" alt="Hochzeitsmoment 7">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-number">Moment 7</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(8)">
+                    <img src="data/images/galerie/Galerie_Bild_08.jpeg" alt="Hochzeitsmoment 8">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-number">Moment 8</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(9)">
+                    <img src="data/images/galerie/Galerie_Bild_09.jpeg" alt="Hochzeitsmoment 9">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-number">Moment 9</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(10)">
+                    <img src="data/images/galerie/Galerie_Bild_10.jpeg" alt="Hochzeitsmoment 10">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-number">Moment 10</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(11)">
+                    <img src="data/images/galerie/Galerie_Bild_11.jpeg" alt="Hochzeitsmoment 11">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-number">Moment 11</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(12)">
+                    <img src="data/images/galerie/Galerie_Bild_12.jpeg" alt="Hochzeitsmoment 12">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-number">Moment 12</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact" id="contact">
+            <div class="contact-header">
+                <h3>Kontakt</h3>
+                <p>Lassen Sie uns gemeinsam Ihre Traumhochzeit gestalten</p>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <a href="#" class="email-link contact-email" onclick="openSecureEmail(); return false;">
+                        nicole<img src="data/symbols/email_at_gold.png" alt="@" class="at-symbol">favoladamore.de
+                    </a>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <a href="tel:+4917641449953" class="contact-link">+49 176 41449953</a>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-social">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/favoladamore/" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61568873951831" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-legal">
+                <div class="legal-links">
+                    <a href="impressum.html" class="legal-link">Impressum</a>
+                    <a href="datenschutz.html" class="legal-link">Datenschutz</a>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 Favola d'amore - Nicole Gastrop. Alle Rechte vorbehalten. <span class="heart-small">♡</span>
+                </p>
+                
+                <div class="footer-made-with">
+                    <p class="footer-made-with-text">
+                        Mit <span class="heart-small">♡</span> gestaltet von
+                        <a href="https://marco-gastrop.de" target="_blank" rel="noopener noreferrer" class="creator-link">
+                            <span class="creator-name">Marco Gastrop</span>
+                            <span class="globe-icon">🌐</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Contact Button -->
+        <div class="floating-contact-btn" onclick="scrollToContact()">
+            <span class="contact-btn-icon"><i class="fas fa-envelope"></i></span>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox(event)">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1, event)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <img id="lightbox-img" src="" alt="Galeriebild">
+            <button class="lightbox-nav lightbox-next" onclick="changeImage(1, event)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="lightbox-counter">
+                <span id="current-image">1</span> / <span id="total-images">12</span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let currentImageIndex = 1;
+        const totalImages = 12;
+
+        function openLightbox(imageNumber) {
+            currentImageIndex = imageNumber;
+            updateLightboxImage();
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeLightbox(event) {
+            if (event) {
+                event.stopPropagation();
+            }
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+
+        function changeImage(direction, event) {
+            if (event) {
+                event.stopPropagation();
+            }
+            currentImageIndex += direction;
+            
+            if (currentImageIndex > totalImages) {
+                currentImageIndex = 1;
+            } else if (currentImageIndex < 1) {
+                currentImageIndex = totalImages;
+            }
+            
+            updateLightboxImage();
+        }
+
+        function updateLightboxImage() {
+            const imgElement = document.getElementById('lightbox-img');
+            const imageNumber = currentImageIndex.toString().padStart(2, '0');
+            imgElement.src = `data/images/galerie/Galerie_Bild_${imageNumber}.jpeg`;
+            document.getElementById('current-image').textContent = currentImageIndex;
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                } else if (e.key === 'ArrowLeft') {
+                    changeImage(-1);
+                } else if (e.key === 'ArrowRight') {
+                    changeImage(1);
+                }
+            }
+        });
+
+        function scrollToContact() {
+            document.querySelector('.contact').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Bot-sichere E-Mail-Funktion
+        function openSecureEmail() {
+            const parts = ['ni', 'co', 'le'];
+            const domain = ['fav', 'ola', 'dam', 'ore', '.de'];
+            const user = parts.join('');
+            const dom = domain.join('');
+            const email = user + String.fromCharCode(64) + dom; // 64 = @
+            window.location.href = 'mai' + 'lto:' + email;
+        }
+
+        // Verhindert Kopieren der E-Mail-Bereiche
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailLinks = document.querySelectorAll('.email-link');
+            
+            emailLinks.forEach(function(link) {
+                // Verhindert Rechtsklick/Kontextmenü
+                link.addEventListener('contextmenu', function(e) {
+                    e.preventDefault();
+                    return false;
+                });
+                
+                // Verhindert Drag-Start
+                link.addEventListener('dragstart', function(e) {
+                    e.preventDefault();
+                    return false;
+                });
+                
+                // Verhindert Copy-Events
+                link.addEventListener('copy', function(e) {
+                    e.preventDefault();
+                    return false;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
