@@ -23,6 +23,7 @@
     --color-black: #000000;
     
     /* Farben - Transparent */
+    --color-green-transparent-9: rgba(248, 255, 248, 0.9);
     --color-gold-transparent-10: rgba(212, 175, 55, 0.1);
     --color-gold-transparent-12: rgba(212, 175, 55, 0.12);
     --color-gold-transparent-15: rgba(212, 175, 55, 0.15);
@@ -45,6 +46,55 @@
     --color-black-transparent-2: rgba(0, 0, 0, 0.2);
     --color-black-transparent-25: rgba(0, 0, 0, 0.25);
     --color-black-transparent-3: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] {
+    /* Farben - Gold/Gelb */
+    --color-gold: #d4af37;
+    --color-gold-light: #f4d03f;
+    --color-gold-lighter: #f0c63f;
+    --color-gold-medium: #cca525;
+    --color-gold-dark: #af8c17;
+    --color-gold-darker: #e6c147;
+    
+    /* Farben - Grün - Dark Mode */
+    --color-green-dark: #a0b5a0;
+    --color-green-medium: #8fa38f;
+    --color-green-light: #1a2e1a;
+    --color-green-lighter: #202f20;
+    --color-green-lightest: #162716;
+    
+    /* Farben - Neutral - Dark Mode */
+    --color-white: #1a1a1a;
+    --color-gray: #a0a0a0;
+    --color-gray-medium: #787878;
+    --color-gray-brown: #6b5d4f;
+    --color-black: #ffffff;
+    
+    /* Farben - Transparent */
+    --color-green-transparent-9: rgba(35, 39, 35, 0.9);
+    --color-gold-transparent-10: rgba(212, 175, 55, 0.1);
+    --color-gold-transparent-12: rgba(212, 175, 55, 0.12);
+    --color-gold-transparent-15: rgba(212, 175, 55, 0.15);
+    --color-gold-transparent-2: rgba(212, 175, 55, 0.2);
+    --color-gold-transparent-25: rgba(212, 175, 55, 0.25);
+    --color-gold-transparent-3: rgba(212, 175, 55, 0.3);
+    --color-gold-transparent-4: rgba(212, 175, 55, 0.4);
+    --color-gold-transparent-5: rgba(212, 175, 55, 0.5);
+    --color-green-transparent-05: rgba(160, 181, 160, 0.15);
+    --color-green-transparent-3: rgba(160, 181, 160, 0.3);
+    --color-white-transparent-5: rgba(26, 26, 26, 0.5);
+    --color-white-transparent-7: rgba(26, 26, 26, 0.7);
+    --color-white-transparent-8: rgba(26, 26, 26, 0.8);
+    --color-white-transparent-9: rgba(26, 26, 26, 0.9);
+    --color-white-transparent-95: rgba(26, 26, 26, 0.95);
+    --color-black-transparent-08: rgba(255, 255, 255, 0.08);
+    --color-black-transparent-1: rgba(255, 255, 255, 0.1);
+    --color-black-transparent-12: rgba(255, 255, 255, 0.12);
+    --color-black-transparent-15: rgba(255, 255, 255, 0.15);
+    --color-black-transparent-2: rgba(255, 255, 255, 0.2);
+    --color-black-transparent-25: rgba(255, 255, 255, 0.25);
+    --color-black-transparent-3: rgba(255, 255, 255, 0.3);
 }
 
 /* Grundlegende Styles */
@@ -643,7 +693,7 @@ body {
 
 .welcome-text {
     margin-bottom: 3rem;
-    background: linear-gradient(135deg, rgba(248, 255, 248, 0.9), var(--color-white-transparent-7));
+    background: linear-gradient(135deg, var(--color-green-transparent-9), var(--color-white-transparent-7));
     padding: 2.5rem;
     border-radius: 25px;
     border: 2px solid var(--color-gold-transparent-25);
@@ -1684,15 +1734,15 @@ body[data-page="honorar"] .profile-image {
     content: "•";
     position: absolute;
     left: 0;
-    color: #d4af37;
+    color: var(--color-gold);
     font-weight: bold;
 }
 
 .contact-cta {
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
+    background: linear-gradient(135deg, var(--color-gold-transparent-10), rgba(212, 175, 55, 0.05));
     padding: 1.5rem;
     border-radius: 15px;
-    border: 2px solid rgba(212, 175, 55, 0.3);
+    border: 2px solid var(--color-gold-transparent-3);
     margin-top: 2rem;
     text-align: center;
 }
@@ -1700,11 +1750,11 @@ body[data-page="honorar"] .profile-image {
 .contact-cta p {
     margin: 0;
     font-size: 1.2rem;
-    color: #5a7a5a;
+    color: var(--color-green-dark);
 }
 
 .contact-cta strong {
-    color: #d4af37;
+    color: var(--color-gold);
     font-weight: 600;
 }
 
@@ -1737,12 +1787,12 @@ body[data-page="honorar"] .profile-image {
     background: rgba(248, 255, 248, 0.8);
     padding: 2rem;
     border-radius: 15px;
-    border-left: 4px solid #d4af37;
+    border-left: 4px solid var(--color-gold);
     margin: 2.5rem 0;
 }
 
 .honorar-services-title {
-    color: #d4af37;
+    color: var(--color-gold);
     margin-bottom: 1.5rem;
     font-family: 'Dancing Script', cursive;
     font-size: 2rem;
@@ -1766,20 +1816,20 @@ body[data-page="honorar"] .profile-image {
 .service-heart {
     position: absolute;
     left: 0;
-    color: #d4af37;
+    color: var(--color-gold);
     font-size: 1.3rem;
 }
 
 .honorar-price-box {
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
+    background: linear-gradient(135deg, var(--color-gold-transparent-2), var(--color-gold-transparent-10));
     padding: 3rem 2.5rem;
     border-radius: 25px;
-    border: 3px solid rgba(212, 175, 55, 0.5);
+    border: 3px solid var(--color-gold-transparent-5);
     margin-top: 3rem;
     text-align: center;
     box-shadow: 
-        0 10px 30px rgba(212, 175, 55, 0.25),
-        0 5px 15px rgba(0, 0, 0, 0.1),
+        0 10px 30px var(--color-gold-transparent-25),
+        0 5px 15px var(--color-black-transparent-1),
         inset 0 1px 0 rgba(255, 255, 255, 0.4);
     position: relative;
     overflow: hidden;
@@ -1804,12 +1854,12 @@ body[data-page="honorar"] .profile-image {
 .honorar-price-title {
     font-family: 'Dancing Script', cursive;
     font-size: 2.5rem;
-    color: #d4af37;
+    color: var(--color-gold);
     margin-bottom: 1.8rem;
     font-weight: 600;
     position: relative;
     z-index: 1;
-    text-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+    text-shadow: 0 2px 8px var(--color-gold-transparent-3);
 }
 
 .honorar-price-title::after {
@@ -1817,7 +1867,7 @@ body[data-page="honorar"] .profile-image {
     display: block;
     width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+    background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
     margin: 0.8rem auto 0;
     border-radius: 2px;
 }
@@ -1825,10 +1875,10 @@ body[data-page="honorar"] .profile-image {
 .honorar-price-amount {
     font-size: 3rem;
     font-weight: 700;
-    color: #d4af37;
+    color: var(--color-gold);
     margin: 0;
     font-family: 'Cormorant Garamond', serif;
-    text-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    text-shadow: 0 3px 6px var(--color-black-transparent-15);
     position: relative;
     z-index: 1;
     letter-spacing: 2px;
@@ -1837,7 +1887,7 @@ body[data-page="honorar"] .profile-image {
 .honorar-price-tax {
     font-size: 1.3rem;
     font-weight: 500;
-    color: #5a7a5a;
+    color: var(--color-green-dark);
     display: inline-block;
     margin-left: 0.5rem;
 }
@@ -1845,7 +1895,7 @@ body[data-page="honorar"] .profile-image {
 .honorar-price-subtitle {
     margin-top: 1.2rem;
     font-size: 1.4rem;
-    color: #5a7a5a;
+    color: var(--color-green-dark);
     font-style: italic;
     position: relative;
     z-index: 1;
