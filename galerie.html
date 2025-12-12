@@ -43,36 +43,36 @@
             </div>
         </header>
         
-        <!-- Navigation -->
+         <!-- Navigation -->
         <nav class="main-navigation">
             <div class="nav-container">
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">
+                        <a href="/" class="nav-link">
                             <i class="fas fa-home nav-icon"></i>
                             <span>Home</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="deinevent.html" class="nav-link">
+                        <a href="deinevent" class="nav-link">
                             <i class="fas fa-heart nav-icon"></i>
                             <span>Dein Event</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="honorar.html" class="nav-link">
+                        <a href="honorar" class="nav-link">
                             <i class="fas fa-certificate nav-icon"></i>
                             <span>Honorar</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="galerie.html" class="nav-link active">
+                        <a href="galerie" class="nav-link">
                             <i class="fas fa-camera nav-icon"></i>
                             <span>Galerie</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.html#contact" class="nav-link">
+                        <a href="#contact" class="nav-link">
                             <i class="fas fa-envelope nav-icon"></i>
                             <span>Kontakt</span>
                         </a>
@@ -83,10 +83,10 @@
         
         <!-- Gallery Content -->
         <div class="gallery-content">
-            <div class="gallery-header">
-                <h2><span class="heart-small-bottom">♡</span> Momente voller Liebe<span class="heart-big-top">♡</span></h2>
-                <p>**TEXT**</p>
-            </div>
+                <div class="welcome-text">
+                        <h2><span class="heart-small-bottom">♡</span> Momente voller Liebe<span class="heart-big-top">♡</span></h2>
+                        <p>Als Hochzeitsrednerin darf ich Worte finden, die Herzen verbinden und Augenblicke unvergesslich machen.</p>
+                    </div>
 
             <div class="gallery-grid">
                 <div class="gallery-item" onclick="openLightbox(1)">
@@ -192,7 +192,7 @@
                 </div>
             </div>
             
-            <div class="footer-divider"></div>
+             <div class="footer-divider"></div>
             
             <div class="footer-social">
                 <h4>Folgen Sie mir</h4>
@@ -220,27 +220,33 @@
             
             <div class="footer-legal">
                 <div class="legal-links">
-                    <a href="impressum.html" class="legal-link">Impressum</a>
-                    <a href="datenschutz.html" class="legal-link">Datenschutz</a>
+                    <a href="impressum" class="legal-link">Impressum</a>
+                    <a href="datenschutz" class="legal-link">Datenschutz</a>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p class="footer-copyright">
-                    © 2025 Favola d'amore - Nicole Gastrop. Alle Rechte vorbehalten. <span class="heart-small">♡</span>
-                </p>
-                
-                <div class="footer-made-with">
-                    <p class="footer-made-with-text">
-                        Mit <span class="heart-small">♡</span> gestaltet von
-                        <a href="https://marco-gastrop.de" target="_blank" rel="noopener noreferrer" class="creator-link">
-                            <span class="creator-name">Marco Gastrop</span>
-                            <span class="globe-icon">🌐</span>
-                        </a>
-                    </p>
+                <div class="footer-copyright">
+                    © 2025 Nicole - Freie Traurednerin<span class="heart-small">♡</span>Alle Rechte vorbehalten
                 </div>
+                <button class="back-to-top" onclick="scrollToTop()">
+                    <i class="fas fa-arrow-up"></i>
+                    Nach oben
+                </button>
             </div>
-        </div>
+            
+            <div class="footer-made-with">
+                <span class="footer-made-with-text">Liebevoll gestaltet</span>
+                <span class="heart-small">♡</span>
+                <span class="footer-made-with-text">von</span>
+                <span class="creator-name">Marco Rey</span>
+                <span>bei</span>
+                <a href="https://conflictstudios.de/WebDev" class="creator-link" target="_blank" rel="noopener" title="Conflict Studios – Webdesign mit Leidenschaft">
+                   Conflict Studios
+                </a>
+            </div>
+
+        </footer>
         
         <!-- Floating Contact Button -->
         <div class="floating-contact-btn" onclick="scrollToContact()">
@@ -250,20 +256,20 @@
 
     <!-- Lightbox Modal -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox(event)">
+            <i class="fas fa-times"></i>
+        </button>
         <div class="lightbox-content">
-            <button class="lightbox-close" onclick="closeLightbox(event)">
-                <i class="fas fa-times"></i>
-            </button>
-            <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1, event)">
-                <i class="fas fa-chevron-left"></i>
-            </button>
             <img id="lightbox-img" src="" alt="Galeriebild">
-            <button class="lightbox-nav lightbox-next" onclick="changeImage(1, event)">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-            <div class="lightbox-counter">
-                <span id="current-image">1</span> / <span id="total-images">12</span>
-            </div>
+        </div>
+        <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1, event)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-nav lightbox-next" onclick="changeImage(1, event)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-counter">
+            <span id="current-image">1</span> / <span id="total-images">12</span>
         </div>
     </div>
     
@@ -273,6 +279,20 @@
         let touchStartX = 0;
         let touchEndX = 0;
         let isAnimating = false;
+
+                function scrollToContact() {
+            document.querySelector('.contact').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({ 
+                top: 0, 
+                behavior: 'smooth' 
+            });
+        }
 
         function openLightbox(imageNumber) {
             currentImageIndex = imageNumber;
@@ -325,8 +345,8 @@
                 setTimeout(() => {
                     imgElement.classList.remove(inAnimation);
                     isAnimating = false;
-                }, 500);
-            }, 500);
+                }, 75);
+            }, 75);
         }
 
         function updateLightboxImage() {
