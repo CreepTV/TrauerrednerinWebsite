@@ -1,9 +1,5 @@
 RewriteEngine On
 
-# Weiterleitung von HTTP zu HTTPS
-RewriteCond %{HTTPS} !=on
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
 # Entferne .html Extension von URLs
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -11,4 +7,3 @@ RewriteRule ^([^\.]+)$ $1.html [L]
 
 # 404 Fehlerseite
 ErrorDocument 404 /404.html
-
